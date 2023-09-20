@@ -10,4 +10,13 @@ neccessary packages to execute the whole pipeline. In the folder
 `jnb`, all jupyter notebooks will be saved. Finally in the `src`
 folder all python scripts and all the models will be founds.
 
+## Pipeline Execution
+1. `python3 src/data/preprocess.py`
+1. `python3 src/data/process.py`
+1. `python3 src/main.py`
 
+## The output
+The output prediction will be saved as an `npy` file
+which will have the last 200 predictions in order.
+To load them in python, one can use the following code<br>
+`import numpy as np; y_hat = np.load("./dbs/cooked/preds.npy")`
